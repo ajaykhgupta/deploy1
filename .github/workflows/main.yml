@@ -15,7 +15,15 @@ jobs:
       - 
         name: Build the Docker image
         run: docker-compose build    
-    
+      
+      - 
+        name: tag postgres
+        run: docker tag postgres 9326564676/postgres:11
+      
+      - 
+        name: tag python app
+        run: docker tag pythonapp 9326564676/pythonapp
+      
       -
         name: Login to DockerHub
         uses: docker/login-action@v1 

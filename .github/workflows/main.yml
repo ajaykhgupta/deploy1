@@ -16,9 +16,9 @@ jobs:
         name: Build the Docker image
         run: docker-compose build    
       
-      - 
-        name: tag postgres
-        run: docker tag postgres 9326564676/postgres:11
+#       - 
+#         name: tag postgres
+#         run: docker tag postgres 9326564676/postgres:11
       
       - 
         name: tag python app
@@ -30,9 +30,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: push postgres
-        run: docker push 9326564676/postgres:11
+#       -
+#         name: push postgres
+#         run: docker push 9326564676/postgres:11
       -
         name: push pythonapp
         run: docker push 9326564676/pythonapp

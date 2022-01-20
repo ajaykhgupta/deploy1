@@ -23,5 +23,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: push
-        run: docker push 9326564676/deploy1
+        name: push postgres
+        run: docker push postgres
+      -
+        name: push pythonapp
+        run: docker push pythonapp
